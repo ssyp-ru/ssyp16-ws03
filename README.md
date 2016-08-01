@@ -1,13 +1,26 @@
-# ssyp16-ws03 (Issue Fast Killer)
+# Issue Fast Killer (Молниеносный Проблемобой)
 
-## Software Requirements
-  - Visual Studio 2015
-  - SQL Server v13
-  - Google Chrome (100% JS compatibility)
+IFK - это система контроля выполнения задач, позволяющая рабоать по методологии scrum (https://ru.wikipedia.org/wiki/Scrum)
 
-## To Start Working With
- 1. Open .sln file with VS 15.
- 2. Select 'Server' project as StartUp Project.
- 3. Start dubugging (run with Google Chrome is recommended)
+Мастерская №03, Летняя школа юных программистов, 2016 г.
 
-If you have any problems or questions, contact me via e-mail spleen47@mail.ru
+## Функциональность
+
+* Хранение всех задач конкретного проекта
+* Вывод только тех задач, которые должен выполнить пользователь
+* Возможность выставить приоритет и стоимость задачи, а также менять статус выполнения в ходе работы над задачей
+
+## Требования
+
+* Visual Studio 2015
+* SQL Server v13
+* Google Chrome (100% JS совместимость)
+
+## Запуск
+
+ 1. Откройте .sln файл в VS 15.
+ 2. Выберите 'Server' запускаемым проектом.
+ 3. 'Start Debugging' (рекомендуется запускать в Google Chrome)
+ 
+## Контакты
+ По вопросам обращаться на почту spleen47@mail.ru
