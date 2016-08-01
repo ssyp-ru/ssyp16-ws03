@@ -1,0 +1,22 @@
+﻿.chat .chip 
+{
+    height: auto;
+    margin-top: 10px;
+}
+
+.chat .yours 
+{
+    background-color: #80cbc4;
+}
+
+.chat .messages
+{
+    height: 90%;
+    border-bottom: 1px solid #e0e0e0;
+    overflow: auto;
+}
+
+.chat .inputMessage 
+{
+    height: 9%;
+}

@@ -1,0 +1,38 @@
+﻿body
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    overflow: hidden;
+}
+
+.main 
+{
+    height: 90%;
+}
+
+.full 
+{
+    height: 100%;
+}
+
+.menu 
+{
+    height: 10%;
+}
+
+.chat 
+{
+    height: 100%;
+}
+
+.issuesList {
+    height: 100%;
+}
+
+.usersList {
+    height: 100%;
+}

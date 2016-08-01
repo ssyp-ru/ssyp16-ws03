@@ -1,0 +1,19 @@
+﻿h3.header-teal, h4.header-teal, h5.header-teal, h6.header-teal, h7.header-teal
+{
+    color: #4db6ac;
+}
+
+h3.header-pink, h4.header-pink, h5.header-pink, h6.header-pink, h7.header-pink
+{
+    color: #ec407a !important;
+}
+
+h3.header-grey, h4.header-grey, h5.header-grey, h6.header-grey, h7.header-grey
+{
+    color: #bdbdbd !important;
+}
+
+a 
+{
+    color: #ec407a;
+}

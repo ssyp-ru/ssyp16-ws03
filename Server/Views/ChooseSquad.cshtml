@@ -1,0 +1,57 @@
+<div class="center-align" ng-app="IFKApp" ng-controller="ChooseSquadCtrl as ctrl">
+    <h3 class="header-pink"> Choose squad </h3>
+
+    <div class="container">
+    You can create a squad and then give your team the squad key or you can join a squad and work on your tasks.
+    </div>
+    <br>
+    <div class="row">
+        <div class="offset-s4 col s2">
+            <a href="" class="waves-effect waves-lighten btn-large" onclick="$('#CreateSquadModal').openModal()"> Create squad </a>
+        </div>
+
+        <div class="col s2">
+            <a href="" class="waves-effect waves-lighten btn-large" onclick="$('#JoinSquadModal').openModal()"> Join squad </a>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal" id="JoinSquadModal">
+        <div class="modal-content">
+            <h5 class="header-teal"> Join squad </h5>
+
+            <div class="input-field">
+                <input id="InputSquadKey" type="text" class="validate" ng-model="ctrl.SquadKey">
+                <label for="InputSquadKey" class="active left-align"> Squad key </label>
+            </div>
+        </div>
+
+        <div class="modal-footer row">
+            <div class="offset-s5 col s2">
+                <a href="" class="modal-action modal-close waves-effect waves-light btn" onclick="$('#JoinSquadModal').closeModal()" ng-click="ctrl.JoinSquad()"> Accept </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="CreateSquadModal">
+        <div class="modal-content">
+            <h5 class="header-teal"> Create squad </h5>
+
+            <div class="input-field">
+                <input id="InputSquadName" type="text" class="validate" ng-model="ctrl.SquadName">
+                <label for="InputSquadName" class="active left-align"> Name </label>
+            </div>
+
+            <div class="input-field">
+                <input id="InputSquadKey_create" type="text" class="validate" ng-model="ctrl.SquadKey">
+                <label for="InputSquadKey_create" class="active left-align"> Squad key </label>
+            </div>
+        </div>
+    
+        <div class="modal-footer row">
+            <div class="offset-s5 col s2">
+                <a href="" class="modal-action modal-close waves-effect waves-light btn" onclick="$('#CreateSquadModal').closeModal()" ng-click="ctrl.CreateSquad()"> Accept </a>
+            </div>
+        </div>
+    </div>
+</div>

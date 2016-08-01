@@ -1,0 +1,23 @@
+﻿<div class="center-align " ng-app="IFKApp" ng-controller="SignUpCtrl as ctrl">
+   <h3 class="header-pink"> Sign up </h3>
+
+   <div class="row">
+        <from class="offset-s4 col s4">
+            <div class="input-field">
+                <input id="InputEmail" type="email" class="validate" ng-model="ctrl.Email">
+                <label for="InputEmail" class="active left-align"> Email </label>
+            </div>
+
+            <div class="input-field">
+                <input id="InputPassword" type="password" class="validate" ng-model="ctrl.Password">
+                <label for="InputPassword" class="active left-align"> Password </label>
+            </div>
+        </from>
+    </div>
+
+    <a ng-href="#/auth/login"> Login </a>
+    <br>
+    <br>
+
+    <button class="waves-effect waves-light btn" ng-click="ctrl.SignUp()"> Send </button>
+</div>

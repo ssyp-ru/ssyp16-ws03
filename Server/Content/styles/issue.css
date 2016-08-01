@@ -1,0 +1,29 @@
+﻿.issuesList
+{
+    overflow: auto;
+}
+
+.issuesList .issue {
+    color: white !important;
+    text-align: left;
+}
+
+    .issuesList .issue:hover {
+        background-color: #009688 !important;
+    }
+
+.issuesList .lowPriority {
+    background-color: #4db658;
+}
+
+.issuesList .middlePriority {
+    background-color: #c7cd2b;
+}
+
+.issuesList .highPriority {
+    background-color: #c30c0c;
+}
+
+.completed .issue {
+    background-color: #bdbdbd;
+}

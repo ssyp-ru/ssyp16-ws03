@@ -1,0 +1,65 @@
+@{
+    Layout = "~/Views/Templates/_Default.cshtml";
+}
+
+<div class="full row" ng-app="" ng-controller="">
+
+    <!-- USERS -->
+    <div class="usersList col s3 z-depth-1">
+        
+        <h3 class="header-pink center-align"> Squad </h3>
+        <br>
+        <h5 class="header-pink center-align"> Users </h5>
+
+        <div class="collection">
+            <a href="" class="user collection-item"> Shenfil Sergay </a>
+            <a href="" class="user collection-item"> Redko Sergay </a>
+        </div>
+    </div>
+    
+    <!-- ISSUES -->
+    <div class="main col s9">
+        <div class="main">
+            <h5 class="header-pink center-align"> Sprint </h5>
+
+            <!-- COMPLETED -->
+            <div class="issuesList completed col s4">
+
+                <h5 class="header-grey center-align"> Completed issues </h5>
+
+                <div class="collection">
+                    <a href="" class="issue collection-item"> issue #1 </a>
+                    <a href="" class="issue collection-item"> issue #2 </a>
+                </div>
+            </div>
+
+            <!-- OPEN -->
+            <div class="issuesList col s4">
+
+                <h5 class="header-teal center-align"> Open issues </h5>
+
+                <div class="collection">
+                    <a href="" class="issue lowPriority collection-item"> issue #1 </a>
+                    <a href="" class="issue highPriority collection-item"> issue #2 </a>
+                </div>
+            </div>
+
+            <!-- INPROGRESS -->
+            <div class="issuesList col s4">
+
+                <h5 class="header-teal center-align"> In-progress issues </h5>
+
+                <div class="collection">
+                    <a href="" class="issue highPriority collection-item"> issue #1 </a>
+                    <a href="" class="issue middlePriority collection-item"> issue #2 </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="offset-s5 col s2 center-align">
+                <a href="" class="waves-effect waves-light btn" ng-class=""> Swap </a>
+            </div>
+        </div>
+    </div>
+</div>

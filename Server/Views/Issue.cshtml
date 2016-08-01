@@ -1,0 +1,102 @@
+﻿<div class="center-align" ng-controller="IssueCtrl as ctrl">
+     <div>
+        <h3 class="header-pink"> {{ctrl.Issue.Name}} </h3>
+        <h5 class="header-pink"> {{ctrl.Issue.Key}}</h5>
+         <h5 class="header-pink"> {{ctrl.Issue.Cost + " points"}}</h5>
+        <br>
+        <h7 class="header"><b> {{"Priority: " + ctrl.GetPriority(ctrl.Issue.Priority)}}</b>  </h7>
+        <br>
+        <h7 class="header" ng-show="!ctrl.IsNew"><b>{{"Status: " + ctrl.GetStatus(ctrl.Issue.Status)}}</b></h7>
+        <br>
+        <br>
+        <h7 class="header-gray" ng-show="!ctrl.IsNew">Assign to: <b>{{ctrl.User.Email}}</b></h7>
+        <br>
+         <br>
+        <div class="container" ng-show="!ctrl.IsNew">{{ctrl.Issue.Description}}</div>
+        <br>
+     </div>
+
+
+    <div ng-show="!ctrl.IsNew">
+        <div class="offset-s1 col s2 center-align" ng-show="ctrl.IsMyIssue">
+            <p>
+                <input name="status" type="radio" id="backlog" value="1" ng-model="ctrl.Issue.Status" />
+                <label for="backlog">Backlog</label>
+            </p>
+            <p>
+                <input name="status" type="radio" id="started" value="2" ng-model="ctrl.Issue.Status" />
+                <label for="started">Started</label>
+            </p>
+            <p>
+                <input name="status" type="radio" id="inprogress" value="3" ng-model="ctrl.Issue.Status" />
+                <label for="inprogress">In-progress</label>
+            </p>
+            <p>
+                <input name="status" type="radio" id="testing" value="4" ng-model="ctrl.Issue.Status" />
+                <label for="testing">Testing</label>
+            </p>
+            <p>
+                <input name="status" type="radio" id="done" value="5" ng-model="ctrl.Issue.Status" />
+                <label for="done">Done</label>
+            </p>
+            <p>
+                <input name="status" type="radio" id="closed" value="6" ng-model="ctrl.Issue.Status" />
+                <label for="closed">Closed</label>
+            </p>
+            
+            <button class="btn green" ng-click="ctrl.Edit()">Save & Exit</button>
+        </div>
+        <br>
+        <button class="btn red" ng-click="ctrl.Remove()">Remove</button>
+        <br>
+        <br>
+        <a ng-href="#/profile" class="waves-effect waves-light btn"> Back </a>
+    </div>
+
+    <div ng-show="ctrl.IsNew">
+        <div class="row">
+            <div class="col offset-s2 s4">
+                <div class="input-field">
+                    <input id="name" type="text" class="validate" ng-model="ctrl.Issue.Name">
+                    <label for="name" class="active left-align"> Name </label>
+                </div>
+                <div class="input-field">
+                    <input id="cost" type="text" class="validate" ng-model="ctrl.Issue.Cost">
+                    <label for="cost" class="active left-align"> Cost </label>
+                </div>
+                <div>
+                    <p>
+                        <input name="priority" type="radio" id="must" value="1" ng-model="ctrl.Issue.Priority" />
+                        <label for="must">Must</label>
+                    </p>
+                    <p>
+                        <input name="priority" type="radio" id="should" value="2" ng-model="ctrl.Issue.Priority" checked />
+                        <label for="should">Should</label>
+                    </p>
+                    <p>
+                        <input name="priority" type="radio" id="maybe" value="3" ng-model="ctrl.Issue.Priority" />
+                        <label for="maybe">Maybe</label>
+                    </p>
+                </div>
+                <div class="input-field">
+                    <textarea id="desc" class="materialize-textarea" ng-model="ctrl.Issue.Description"></textarea>
+                    <label for="desc">Description</label>
+                </div>
+                <div class="center-align">
+                    <button class="btn green" ng-click="ctrl.Add()">Add</button>
+                    <button class="btn red " ng-click="ctrl.Back()">Cancel</button>
+                </div>
+                <br>
+            </div>
+            <div class="col offset-2 s4">
+                Assign a member:
+                <div class="left-align">
+                    <p ng-repeat="user in ctrl.Squad.Composition">
+                        <input name="user" type="radio" id="{{user.ID}}" value="{{user.ID}}" ng-model="ctrl.Issue.UserID" />
+                        <label for="{{user.ID}}">{{user.Email}}</label>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

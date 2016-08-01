@@ -1,0 +1,10 @@
+[Bb]in
+[Oo]bj
+[Rr]elease
+[Dd]ebug
+.vs/
+.vscode/
+TestsResults
+node_modules
+.suo
+packages

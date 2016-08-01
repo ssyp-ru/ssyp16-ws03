@@ -1,0 +1,59 @@
+﻿<div class="full" ng-controller="ProfileCtrl as ctrl">
+
+    <!-- TOP MENU -->
+    <nav class="menu">
+        <div class="nav-wrapper">
+            <a href="" class="brand-logo left"> {{ ctrl.User.Email }} </a>
+
+            <ul class="right hide-on-med-and-down">
+                @*<li><a href="" ng-click=""> My squad </a></li>*@
+                <li><a href="" ng-click="ctrl.AddIssue()"> Add issue</a></li>
+                <li><a href="" onclick="$('#ChangePasswordModal').openModal()" class="modal-trigger"> Change password </a></li>
+                <li><a href="" ng-click="ctrl.Logout()"> Log out </a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main row">
+        <div class="issuesList full col s6 z-depth-1">
+            <h4 class="header-teal"> Complete 'em all </h4>
+               
+             <div class="collection" ng-repeat="issue in ctrl.Issues">
+                    
+                 <a ng-href="#/issue/{{issue.ID}}" class="issue {{ ctrl.GetPriority(issue.Priority) }} collection-item">
+                    [{{issue.Key}}]&nbsp;{{issue.Name}}&nbsp;({{issue.Cost}})<br>   
+                 </a>
+   
+            </div>
+        </div>
+
+        <div class="issuesList full col s6">
+            <h4 class="header-teal"> Squad issues </h4>
+
+            <div class="collection" ng-repeat="issue in ctrl.Squad.Issues">
+                <a ng-href="#/issue/{{issue.ID}}" class="issue {{ ctrl.GetPriority(issue.Priority) }} collection-item">
+                    [{{issue.Key}}]&nbsp;{{issue.Name}}&nbsp;({{issue.Cost}})<br>
+                </a>
+            </div>
+        </div>
+    </div>  
+
+    <!-- MODALS -->
+    <div class="modal" id="ChangePasswordModal">
+        <div class="modal-content">
+            <h5 class="header-teal"> Change password </h5>
+
+            <div class="input-field">
+                <input id="InputPassword" type="password" class="validate" ng-model="ctrl.NewPassword">
+                <label for="InputPassword" class="active left-align"> New password </label>
+            </div>
+        </div>
+
+        <div class="modal-footer row">
+            <div class="offset-s5 col s2">
+                <a href="" class="modal-action modal-close waves-effect waves-light btn" ng-click="ctrl.ChangePassword()"> Accept </a>
+            </div>
+        </div>
+    </div>
+    {{ctrl.Init()}}
+</div>
