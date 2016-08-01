@@ -218,9 +218,6 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Content\styles\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="Content\styles\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="Content\styles\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Controllers\Api\IssuesController.cs" />
     <Compile Include="Controllers\Api\SquadsController.cs" />
     <Compile Include="Controllers\Api\UsersController.cs" />
@@ -248,9 +245,6 @@
     <Content Include="Content\styles\issue.css" />
     <Content Include="Content\styles\materialize.css" />
     <Content Include="Content\styles\menu.css" />
-    <Content Include="Content\styles\obj\Debug\Front.csproj.FileListAbsolute.txt" />
-    <Content Include="Content\styles\obj\Debug\IFK.Front.dll" />
-    <Content Include="Content\styles\obj\Debug\IFK.Front.pdb" />
     <Content Include="Content\styles\size.css" />
     <Content Include="Content\styles\textColor.css" />
     <Content Include="Content\styles\user.css" />
@@ -279,8 +273,6 @@
     <Content Include="Content\fonts\roboto\Roboto-Thin.ttf" />
     <Content Include="Content\fonts\roboto\Roboto-Thin.woff" />
     <Content Include="Content\fonts\roboto\Roboto-Thin.woff2" />
-    <Content Include="Content\styles\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="Content\styles\obj\Debug\Front.csprojResolveAssemblyReference.cache" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="webpack.config.js" />
@@ -297,7 +289,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\styles\obj\Debug\TempPE\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
